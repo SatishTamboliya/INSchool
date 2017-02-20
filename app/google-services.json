@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "1045544489376",
+    "firebase_url": "https://inschool-7a67f.firebaseio.com",
+    "project_id": "inschool-7a67f",
+    "storage_bucket": "inschool-7a67f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045544489376:android:5846191bba863e89",
+        "android_client_info": {
+          "package_name": "com.john.inschool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045544489376-qe1347cnphac9jknmefpkqfsdp2751b0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.john.inschool",
+            "certificate_hash": "66E28CA0B78DF0E0C9F76A32BB576DE75C4EA2F9"
+          }
+        },
+        {
+          "client_id": "1045544489376-fi7do029p148krv4mjo00io00gbeq1mo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.john.inschool",
+            "certificate_hash": "74AF1D8467321A4470DC0D1E3EC1034E62E1A7E8"
+          }
+        },
+        {
+          "client_id": "1045544489376-a0grom6ikg9jpcalifbk3t603qacan52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDooJenbb_U0PTNZPYCt3P9Z9_y8-JwdJg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045544489376-a0grom6ikg9jpcalifbk3t603qacan52.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
