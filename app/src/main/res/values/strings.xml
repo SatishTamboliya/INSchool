@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">INSchool</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="discription_imagebtn">Log In Button</string>
+
 </resources>

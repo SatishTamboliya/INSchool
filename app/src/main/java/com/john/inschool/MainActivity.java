@@ -1,12 +1,15 @@
 package com.john.inschool;
 
 import android.support.annotation.NonNull;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,20 +23,31 @@ public class MainActivity extends AppCompatActivity {
 private static final String TAG = "MainActivity";
     private EditText editText1;
     private EditText editText2;
-    private Button button;
+    private ImageButton button;
+    private ImageView imageView;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
+    TextInputLayout usernameWrapper;
+    TextInputLayout passwordWrapper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Toast.makeText(MainActivity.this, "In onCreate.",
+                Toast.LENGTH_SHORT).show();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        usernameWrapper = (TextInputLayout) findViewById(R.id.usernameWrapper);
+        passwordWrapper = (TextInputLayout) findViewById(R.id.passwordWrapper);
 
 
         editText1 = (EditText) findViewById(R.id.Email_input);
         editText2 = (EditText) findViewById(R.id.Password_input);
-        button = (Button) findViewById(R.id.Login_Button);
+        button = (ImageButton) findViewById(R.id.Login_Button);
+        imageView = (ImageView) findViewById(R.id.INSchool_logo);
+        //imageView.setImageResource(R.drawable.INSchool_logo);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -54,6 +68,7 @@ private static final String TAG = "MainActivity";
             }
         };
 
+
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -72,7 +87,7 @@ private static final String TAG = "MainActivity";
                                     Toast.makeText(MainActivity.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
                                 }else
-                                    Toast.makeText(MainActivity.this, "signInWithEmail:successfull",
+                                    Toast.makeText(MainActivity.this, "signInWithEmail: successful",
                                             Toast.LENGTH_SHORT).show();
 
                                 // ...
@@ -87,6 +102,8 @@ private static final String TAG = "MainActivity";
     public void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
+        Toast.makeText(MainActivity.this, "In onStart.",
+                Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -94,6 +111,8 @@ private static final String TAG = "MainActivity";
         super.onStop();
         if (mAuthListener != null) {
             mAuth.removeAuthStateListener(mAuthListener);
+            Toast.makeText(MainActivity.this, "in OnStop.",
+                    Toast.LENGTH_SHORT).show();
         }
     }
 
