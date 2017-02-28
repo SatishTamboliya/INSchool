@@ -3,5 +3,9 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="discription_imagebtn">Log In Button</string>
+    <string name="discription_imagebtn_for_sign_up">Sign Up Button</string>
+    <string name="askForSignUp">New User? Sign Up</string>
+    <string name="askForSignIn">Already Registered? Sign in</string>
+    <string name="title_activity_signUp">SignUpActivity</string>
 
 </resources>

@@ -5,8 +5,7 @@
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin"
     android:background="@color/colorBackground"
-    android:id="@+id/activity_login">
-
+    android:id="@+id/activity_signUp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,15 +25,15 @@
             />
 
         <!--<TextView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="INSchool"-->
-            <!--android:textColor="#000000"-->
-            <!--android:fontFamily="cursive"-->
-            <!--android:textSize="80sp"-->
-            <!--android:layout_centerInParent="true"-->
-            <!--android:gravity="center"-->
-            <!--tools:ignore="UnusedAttribute" />-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="INSchool"-->
+        <!--android:textColor="#000000"-->
+        <!--android:fontFamily="cursive"-->
+        <!--android:textSize="80sp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:gravity="center"-->
+        <!--tools:ignore="UnusedAttribute" />-->
     </RelativeLayout>
 
     <LinearLayout
@@ -62,13 +61,13 @@
 
         </android.support.design.widget.TextInputLayout>
         <!--<EditText-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:hint="Email"-->
-            <!--android:inputType="textEmailAddress"-->
-            <!--android:id="@+id/Email_input"-->
-            <!--android:lines="1"-->
-            <!--android:maxLines="1"/>-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="Email"-->
+        <!--android:inputType="textEmailAddress"-->
+        <!--android:id="@+id/Email_input"-->
+        <!--android:lines="1"-->
+        <!--android:maxLines="1"/>-->
 
 
         <android.support.design.widget.TextInputLayout
@@ -91,13 +90,13 @@
 
         </android.support.design.widget.TextInputLayout>
         <!--<EditText-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:hint="password"-->
-            <!--android:inputType="textPassword"-->
-            <!--android:id="@+id/Password_input"-->
-            <!--android:lines="1"-->
-            <!--android:maxLines="1"/>-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="password"-->
+        <!--android:inputType="textPassword"-->
+        <!--android:id="@+id/Password_input"-->
+        <!--android:lines="1"-->
+        <!--android:maxLines="1"/>-->
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -106,20 +105,20 @@
             android:background="@color/colorBackground"
             android:layout_gravity="end"
             android:contentDescription="@string/discription_imagebtn"
-            android:id="@+id/Login_Button"/>
+            android:id="@+id/SignUp_Button"/>
         <!--<Button-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:hint="Log in"-->
-            <!--android:id="@+id/Login_Button"/>-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:hint="Log in"-->
+        <!--android:id="@+id/Login_Button"/>-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/askForSignUp"
+            android:text="@string/askForSignIn"
             android:textColor="@color/colorPrimaryDark"
-            android:id="@+id/signUpTextView"/>
+            android:id="@+id/signInTextView"/>
 
     </LinearLayout>
 
