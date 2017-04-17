@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
                     else{
                         //make user profile and navigate there
                         Toast.makeText(MainActivity.this, "going to welcome page", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this , LogInActivity.class));
 
                     }
 
@@ -42,15 +43,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
-
-
     }
 
     @Override
     public void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
-
     }
 
     @Override

@@ -81,6 +81,7 @@ public class LogInActivity extends AppCompatActivity{
                 String password = passwordWrapper.getEditText().getText().toString();
                 usernameWrapper.setError(null);
                 passwordWrapper.setError(null);
+                startActivity(new Intent(LogInActivity.this , HomeActivity.class));
                 if (!validateEmail(username)) {
                     usernameWrapper.setError("Not a valid email address!");
                 }
@@ -112,6 +113,7 @@ public class LogInActivity extends AppCompatActivity{
                                                     Toast.LENGTH_SHORT).show();
 
                                             //make welcome page and navigate there
+                                            startActivity(new Intent(LogInActivity.this , HomeActivity.class));
                                         }
                                     }
 

@@ -7,13 +7,11 @@
     android:background="@color/colorBackground"
     android:id="@+id/activity_signUp">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_weight="0.5">
-
 
         <ImageView
             android:layout_width="match_parent"
@@ -21,7 +19,7 @@
             android:layout_centerInParent="true"
             android:gravity="center"
             android:id="@+id/INSchool_logo"
-            android:src="@drawable/lomakr2"
+            android:src="@drawable/yogi"
             android:contentDescription="@string/app_name"
             />
 

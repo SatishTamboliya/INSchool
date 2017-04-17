@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_contact_us_fragment"
+    android:background="#000000"
+    tools:context="com.john.inschool.Contact_us_fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ss.com.bannerslider.views.BannerSlider
+            android:id="@+id/slider_programs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ss.com.bannerslider.views.BannerSlider>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="80dp"
+            android:id="@+id/feedback_queey"
+            android:background="@drawable/button"
+            android:layout_below="@id/slider_programs"
+            android:text="Feedback/query"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/kys_programs"
+            android:textSize="25dp"
+            android:text="more details.."
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="Our Facebook.."
+            android:textColor="#3b5998"
+            android:textSize="25dp"
+            android:id="@+id/fb_from_programs"
+            android:layout_marginBottom="25dp"/>
+    </RelativeLayout>
+
+</FrameLayout>

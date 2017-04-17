@@ -1,0 +1,85 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.john.inschool.Programs_Lawn_Intermediate_Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/Title_intermediate"
+            android:background="@drawable/button"
+            android:text="InterMediate"
+            android:textSize="20dp"
+            android:fontFamily=""
+            android:textColor="#ff0000"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/oneMonthBeg"
+            android:background="@drawable/button"
+            android:text="1 Month -> 1500 ₹"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:layout_below="@id/Title_intermediate"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/twoMonthBeg"
+            android:background="@drawable/button"
+            android:text="2 Months -> 2400 ₹"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:layout_below="@id/oneMonthBeg"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/threeMonthBeg"
+            android:background="@drawable/button"
+            android:text="3 Months -> 3000 ₹"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:layout_below="@id/twoMonthBeg"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/sixMonthBeg"
+            android:background="@drawable/button"
+            android:text="6 Months -> 5400 ₹"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:layout_below="@id/threeMonthBeg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="Our Facebook.."
+            android:textColor="#3b5998"
+            android:textSize="25dp"
+            android:id="@+id/fb_from_programs"
+            android:layout_marginBottom="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/kys_programs"
+            android:textSize="25dp"
+            android:text="more details.."
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="25dp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
