@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
+    android:id="@+id/fragment_contact_feedback_fragment"
     tools:context="com.john.inschool.Contact_feedback_query_fragment">
 
     <LinearLayout

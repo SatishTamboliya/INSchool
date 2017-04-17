@@ -81,13 +81,12 @@ public class LogInActivity extends AppCompatActivity{
                 String password = passwordWrapper.getEditText().getText().toString();
                 usernameWrapper.setError(null);
                 passwordWrapper.setError(null);
-                startActivity(new Intent(LogInActivity.this , HomeActivity.class));
                 if (!validateEmail(username)) {
                     usernameWrapper.setError("Not a valid email address!");
                 }
-                if (!validatePassword(password)) {
+                else if (!validatePassword(password)) {
                     passwordWrapper.setError("Not a valid password!");
-                } else {
+                }else {
                     usernameWrapper.setErrorEnabled(false);
                     passwordWrapper.setErrorEnabled(false);
 
@@ -139,14 +138,14 @@ public class LogInActivity extends AppCompatActivity{
 //        mAuth.addAuthStateListener(mAuthListener);
 //
 //    }
-//
-//    @Override
-//    public void onStop() {
-//        super.onStop();
-//        if (mAuthListener != null) {
-//            mAuth.removeAuthStateListener(mAuthListener);
-//        }
-//    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
+    }
 
     public boolean validateEmail(String email){
         matcher = pattern.matcher(email);

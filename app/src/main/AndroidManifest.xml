@@ -3,7 +3,7 @@
     package="com.john.inschool">
 
     <application
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/yogi"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

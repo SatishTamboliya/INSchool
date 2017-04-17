@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -100,24 +100,34 @@ public class Contact_feedback_query_fragment extends Fragment {
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                name_input.setError(null);
+                email_input.setError(null);
+                phone_input.setError(null);
+                message_input.setError(null);
 
                 name = name_input.getEditText().getText().toString().trim();
                 email = email_input.getEditText().getText().toString().trim();
                 phone = phone_input.getEditText().getText().toString().trim();
                 message = message_input.getEditText().getText().toString().trim();
-//
-//                Toast.makeText(getActivity() ,name , Toast.LENGTH_SHORT).show();
-//                Toast.makeText(getActivity() ,email , Toast.LENGTH_SHORT).show();
-//                Toast.makeText(getActivity() ,phone , Toast.LENGTH_SHORT).show();
-//                Toast.makeText(getActivity() ,message , Toast.LENGTH_SHORT).show();
 
+                if (name == null || name.equals("")) {
+                    name_input.setError("Please add name");
+                } else if (!validateEmail(email)) {
+                    email_input.setError("Not a valid email address!");
+                } else if (!validatePhone(phone)) {
+                    phone_input.setError("Please enter valid Number");
+                } else if (message.equals("") || message == null) {
+                    message_input.setError("Please add message");
+                } else {
                     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users");
                     String userId = mDatabase.push().getKey();
-                    Feedback feedback = new Feedback(name,email,phone,message);
+                    Feedback feedback = new Feedback(name, email, phone, message);
                     mDatabase.child(userId).setValue(feedback);
-                    Toast.makeText(getActivity() ,"Sent." , Toast.LENGTH_SHORT).show();
-
+                    Toast.makeText(getActivity(), "Sent.", Toast.LENGTH_SHORT).show();
+                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                    fragmentManager.beginTransaction().replace(R.id.fragment_contact_feedback_fragment, new Contact_us_fragment()).addToBackStack(null).commit();
                 }
+            }
         });
 
 
